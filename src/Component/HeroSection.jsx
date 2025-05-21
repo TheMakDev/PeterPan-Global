@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../assets/bg.avif'
+import bg from '../assets/hero-1.jpeg'
 
 const HeroSection = () => {
   return (
