@@ -12,133 +12,140 @@ import {
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#F9F9F9] py-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Information */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between">
-          <div className="p-8 space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800">Contact Us</h2>
-              <p className="text-gray-600 text-sm mt-2">
-                Have questions or need help? Feel free to reach out. We're here for you.
-              </p>
-            </div>
 
-            <div className="space-y-4">
-              {/* Location */}
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-100 text-blue-500 rounded-full p-3">
-                  <FaMapMarkerAlt className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm text-gray-700">Location</h4>
-                  <p className="text-xs text-gray-600">American Hall, De La Rue Way, Pinhoe, United Kingdom</p>
-                </div>
+        <div className="space-y-6">
+          <div>
+            <a href="#" className="text-xs font-semibold text-blue-700 uppercase tracking-wide">
+              Get in Touch
+            </a>
+            <h2 className="text-4xl font-bold text-gray-800 mt-2">Contact Us</h2>
+            <p className="text-gray-600 mt-2 text-sm">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque inventore.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+
+            <div className="flex gap-4 items-start">
+              <div className="text-blue-600 text-xl mt-1">
+                <FaMapMarkerAlt />
               </div>
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-100 text-blue-500 rounded-full p-3">
-                  <FaPhoneAlt className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm text-gray-700">Phone</h4>
-                  <p className="text-xs text-gray-600">+234 703 923 7226</p>
-                </div>
-              </div>
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-100 text-blue-500 rounded-full p-3">
-                  <FaEnvelope className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm text-gray-700">Email</h4>
-                  <p className="text-xs text-gray-600">pgs.admin@peterpangs.co.uk</p>
-                </div>
+              <div>
+                <h4 className="font-semibold text-gray-700">Location</h4>
+                <p className="text-gray-600 text-sm">
+                  55 Main street, 2nd block,<br />
+                  Melbourne, Australia
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 pt-4">
-              <h4 className="text-sm font-semibold text-gray-700">Follow Us:</h4>
-              <div className="flex space-x-3">
-                <a href="#" aria-label="Facebook" className="text-gray-500 hover:text-blue-600 transition">
-                  <FaFacebookF />
-                </a>
-                <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-blue-400 transition">
-                  <FaTwitter />
-                </a>
-                <a href="#" aria-label="Pinterest" className="text-gray-500 hover:text-red-500 transition">
-                  <FaPinterest />
-                </a>
-                <a href="#" aria-label="Vimeo" className="text-gray-500 hover:text-blue-700 transition">
-                  <FaVimeoV />
-                </a>
+            <div className="flex gap-4 items-start">
+              <div className="text-blue-600 text-xl mt-1">
+                <FaPhoneAlt />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700">Phone</h4>
+                <p className="text-gray-600 text-sm">
+                  +09 354 587 874<br />
+                  +01 368 567 894
+                </p>
               </div>
             </div>
           </div>
+
+          <div className="flex gap-4 items-start">
+            <div className="text-blue-600 text-xl mt-1">
+              <FaEnvelope />
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-700">Email</h4>
+              <p className="text-gray-600 text-sm">
+                info@example.com<br />
+                info@example.com
+              </p>
+            </div>
+          </div>
+
+          {/* Social */}
+          <div className="flex items-center gap-4 pt-2">
+            <h4 className="text-sm font-semibold text-gray-700">Social</h4>
+            <div className="flex space-x-4 text-gray-600">
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaTwitter /></a>
+              <a href="#"><FaVimeoV /></a>
+              <a href="#"><FaPinterest /></a>
+            </div>
+          </div>
+
           <img
             src={img}
-            alt="Our team at work"
-            className="w-full h-64 object-cover"
+            alt="Team working"
+            className="rounded-lg w-full object-cover h-56 mt-6"
           />
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Send a Message</h2>
-          <p className="text-sm text-gray-600 mb-8">We’d love to hear from you. Drop us a line below.</p>
-          <form className="space-y-6">
+        <div className="bg-[#F9F9F9] rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">Fill Up The Form</h3>
+          <p className="text-sm text-gray-600 mb-6">
+            Your email address will not be published. Required fields are marked *
+          </p>
+          <form className="space-y-5">
             <div>
-              <label htmlFor="name" className="block text-xs font-semibold text-gray-700 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name *
               </label>
               <input
-                type="text"
                 id="name"
+                type="text"
                 required
                 placeholder="Your name"
-                className="w-full border rounded-md py-2 px-3 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-xs font-semibold text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email *
               </label>
               <input
-                type="email"
                 id="email"
+                type="email"
                 required
                 placeholder="you@example.com"
-                className="w-full border rounded-md py-2 px-3 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
             <div>
-              <label htmlFor="subject" className="block text-xs font-semibold text-gray-700 mb-1">
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
                 Subject
               </label>
               <input
-                type="text"
                 id="subject"
+                type="text"
                 placeholder="Subject"
-                className="w-full border rounded-md py-2 px-3 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-xs font-semibold text-gray-700 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Message *
               </label>
               <textarea
                 id="message"
+                rows="4"
                 required
-                rows="5"
                 placeholder="Write your message..."
-                className="w-full border rounded-md py-2 px-3 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-6 py-2 rounded-md transition"
+              className="inline-flex items-center bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition"
             >
-              <FaEnvelope className="mr-2" /> Get In Touch
+              <FaEnvelope className="mr-2" />
+              Get In Touch
             </button>
           </form>
         </div>
