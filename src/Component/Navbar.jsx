@@ -37,11 +37,10 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center space-x-4">
           <div className="flex items-center space-x-1 text-sm font-medium text-gray-700">
             <PhoneCall className="text-blue-600" size={18} />
-            <span>+236 (456) 896 22</span>
+            <span>+234 703 923 7226</span>
           </div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700">
-            <span>Read More</span>
-            <span className="text-white">&rarr;</span>
+          <button className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700">
+            Read More
           </button>
           <Search className="text-blue-600 cursor-pointer" />
         </div>
@@ -65,7 +64,7 @@ export default function Navbar() {
             <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
             <li className="flex items-center space-x-2">
               <PhoneCall className="text-blue-600" size={18} />
-              <span>+236 (456) 896 22</span>
+              <span>+234 703 923 7226</span>
             </li>
             <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-full text-sm mt-2 hover:bg-blue-700">
               Read More →

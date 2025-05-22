@@ -27,7 +27,7 @@ const BusinessSolution = () => {
           We Prominent Truly Trusted IT Business Solutions
         </h2>
         <p className="text-gray-600 mb-6">
-          Transmds is the world’s driving worldwide coordinations supplier — we uphold industry and exchange the worldwide trade of merchandi.
+          We deliver truly trusted IT business solutions built for modern challenges. With a focus on innovation, security, and performance, we empower business growth. Partner with us for scalable technology that drives lasting success.
         </p>
 
         <div className="flex gap-4 mb-6">

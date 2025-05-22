@@ -77,9 +77,9 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Say Hello</h4>
           <a href="info@instantmotexeter.co.uk" className="text-blue-400 hover:underline block mb-2">
-            info@instantmotexeter.co.uk
+            pgs.admin@peterpangs.co.uk
           </a>
-          <p className="text-lg font-bold">01392 758 260</p>
+          <p className="text-lg font-bold">+234 703 923 7226</p>
         </div>
       </div>
 

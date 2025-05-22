@@ -40,12 +40,12 @@ export default function ITBusinessSection() {
         </div>
 
         <div>
-          <p className="text-sm text-blue-600 font-semibold uppercase">5M+ Trusted Our Clients</p>
+          <p className="text-sm text-blue-600 font-semibold uppercase">Clients Love What We Do</p>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mt-2">
-            We Prominent Truly Trusted IT Business Solutions
+            We Provide Truly Trusted IT Business Solutions
           </h2>
           <p className="text-gray-500 mt-4">
-            Transmds is the world’s leading global logistics provider — we support industry and trade in the global exchange of merchandise.
+            At PeterPan Global Services, we deliver truly trusted IT business solutions tailored for modern enterprises. Our focus on innovation, reliability, and growth ensures your business stays secure and competitive. Partner with us for scalable, future-ready technology that drives real success.
           </p>
 
           <div className="flex flex-wrap gap-6 mt-6">
@@ -53,13 +53,13 @@ export default function ITBusinessSection() {
               <div className="w-16 h-16 rounded-full border-4 border-blue-500 flex items-center justify-center text-xl font-bold">
                 68%
               </div>
-              <p className="mt-2 text-sm">Business Strategy</p>
+              <p className="mt-2 text-sm font-bold">Business Strategy</p>
             </div>
-            <div className="text-center">
+            <div className="text-center ">
               <div className="w-16 h-16 rounded-full border-4 border-blue-500 flex items-center justify-center text-xl font-bold">
                 93%
               </div>
-              <p className="mt-2 text-sm">Real Technology Solutions</p>
+              <p className="mt-2 text-sm font-bold">Real Technology Solutions</p>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export default function ITBusinessSection() {
           </ul>
 
           <div className="mt-6">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-full cursor-pointer hover:bg-blue-700 transition">
               Explore More About Us
             </button>
           </div>
