@@ -49,8 +49,7 @@ const ContactUs = () => {
               <div>
                 <h4 className="font-semibold text-gray-700">Phone</h4>
                 <p className="text-gray-600 text-sm">
-                  +09 354 587 874<br />
-                  +01 368 567 894
+                  12345667456
                 </p>
               </div>
             </div>
@@ -63,8 +62,7 @@ const ContactUs = () => {
             <div>
               <h4 className="font-semibold text-gray-700">Email</h4>
               <p className="text-gray-600 text-sm">
-                info@example.com<br />
-                info@example.com
+                pgs.admin@peterpangs.co.uk
               </p>
             </div>
           </div>

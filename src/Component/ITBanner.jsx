@@ -17,7 +17,6 @@ export default function ITBanner() {
           <p className="uppercase text-sm font-bold mb-2">5M+ Trusted Our Clients</p>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Need IT Advisor For Your Business ?<br />
-            Please Call : (123) 884400
           </h1>
           <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full cursor-pointer inline-flex items-center">
             Get A Free Quote
