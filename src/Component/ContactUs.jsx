@@ -36,8 +36,7 @@ const ContactUs = () => {
               <div>
                 <h4 className="font-semibold text-gray-700">Location</h4>
                 <p className="text-gray-600 text-sm">
-                  55 Main street, 2nd block,<br />
-                  Melbourne, Australia
+                  jlnsljfngirnmanfignewrngdsngirnga jnfdgandfmangfdglanfdg
                 </p>
               </div>
             </div>
