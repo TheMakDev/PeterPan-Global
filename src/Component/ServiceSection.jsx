@@ -12,14 +12,14 @@ import {
 import { HiArrowUpRight } from 'react-icons/hi2';
 
 const services = [
-  { title: "Customer Software Development", icon: <FaCode className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Desktop Computing Services", icon: <FaDesktop className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Infrastructure Plan & Business Reform", icon: <FaNetworkWired className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Data & Cyber Security Managment", icon: <FaShieldAlt className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Firewall Advancement & Defender System", icon: <FaLock className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Apps Development & UI/UX Project", icon: <FaPalette className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Backup & Recovery Data Services", icon: <FaDatabase className="text-blue-600 w-10 h-10 mx-auto" /> },
-  { title: "Data & Cyber Security Managment", icon: <FaShieldAlt className="text-blue-600 w-10 h-10 mx-auto" /> }
+  { title: "Web and application development", icon: <FaCode className="text-blue-600 w-10 h-10 mx-auto" /> },
+//   { title: "Desktop Computing Services", icon: <FaDesktop className="text-blue-600 w-10 h-10 mx-auto" /> },
+  { title: "Machine Learning and AI", icon: <FaNetworkWired className="text-blue-600 w-10 h-10 mx-auto" /> },
+  { title: "⁠Consulting Services", icon: <FaShieldAlt className="text-blue-600 w-10 h-10 mx-auto" /> },
+//   { title: "Firewall Advancement & Defender System", icon: <FaLock className="text-blue-600 w-10 h-10 mx-auto" /> },
+//   { title: "Apps Development & UI/UX Project", icon: <FaPalette className="text-blue-600 w-10 h-10 mx-auto" /> },
+//   { title: "Backup & Recovery Data Services", icon: <FaDatabase className="text-blue-600 w-10 h-10 mx-auto" /> },
+//   { title: "Data & Cyber Security Managment", icon: <FaShieldAlt className="text-blue-600 w-10 h-10 mx-auto" /> }
 ];
 
 const ServicesSection = () => {
@@ -34,7 +34,7 @@ const ServicesSection = () => {
           In Startup Business
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
