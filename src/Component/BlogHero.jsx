@@ -9,7 +9,7 @@ const BlogHero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col justify-center h-full">
         <h1 className="text-5xl sm:text-6xl font-bold text-white text-center">
-          Blog
+          Blog is coming soon.....
         </h1>
       </div>
     </div>
