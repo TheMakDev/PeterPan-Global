@@ -15,11 +15,13 @@ const ContactUs = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(null); 
 
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccessMessage('');
+    setIsSuccess(null);
 
     emailjs
       .sendForm(
@@ -31,11 +33,15 @@ const ContactUs = () => {
       .then(
         () => {
           setLoading(false);
-          setSuccessMessage('We have now received the your message, thank you! A member of our team will get back to you soon!');
+          setIsSuccess(true); 
+          setSuccessMessage(
+            'We have now received your message, thank you! A member of our team will get back to you soon!'
+          );
           form.current.reset();
         },
         (error) => {
           setLoading(false);
+          setIsSuccess(false); 
           setSuccessMessage('Failed to send message. Please try again.');
           console.error(error.text);
         }
@@ -45,7 +51,6 @@ const ContactUs = () => {
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
- 
         <div className="space-y-6">
           <a href="#" className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Get in Touch</a>
           <h2 className="text-4xl font-bold text-gray-800 mt-2">Contact Us</h2>
@@ -56,7 +61,7 @@ const ContactUs = () => {
               <div className="text-blue-600 text-xl mt-1"><FaMapMarkerAlt /></div>
               <div>
                 <h4 className="font-semibold text-gray-700">Location</h4>
-                <p className="text-gray-600 text-sm">Exeter Uk</p>
+                <p className="text-gray-600 text-sm">Exeter UK</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -75,7 +80,6 @@ const ContactUs = () => {
               <p className="text-gray-600 text-sm">pgs.admin@peterpangs.co.uk</p>
             </div>
           </div>
-
 
           <div className="flex items-center gap-4 pt-2">
             <h4 className="text-sm font-semibold text-gray-700">Social</h4>
@@ -119,9 +123,7 @@ const ContactUs = () => {
             {successMessage && (
               <div
                 className={`p-3 rounded-md text-sm font-medium ${
-                  successMessage.startsWith('✅')
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-red-100 text-red-700'
+                  isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
                 }`}
               >
                 {successMessage}
