@@ -31,7 +31,7 @@ const ContactUs = () => {
       .then(
         () => {
           setLoading(false);
-          setSuccessMessage('Your message has been sent successfully!');
+          setSuccessMessage('We have now received the your message, thank you! A member of our team will get back to you soon!');
           form.current.reset();
         },
         (error) => {

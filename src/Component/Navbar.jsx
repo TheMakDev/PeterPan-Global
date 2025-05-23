@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, PhoneCall, Search } from "lucide-react";
 
 export default function Navbar() {
+
+  const navigate = useNavigate()
+
   const [isSticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -53,11 +56,11 @@ export default function Navbar() {
               Services
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/blog" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               Contact
@@ -68,8 +71,8 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center space-x-4">
           <div className="flex items-center space-x-1 text-sm font-medium text-gray-700">
           </div>
-          <button className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700">
-            Read More
+          <button onClick={() => navigate('/contact')} className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700">
+            Request a Quote
           </button>
           <Search className="text-blue-600 cursor-pointer" />
         </div>
@@ -117,7 +120,7 @@ export default function Navbar() {
                 Services
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/blog"
                 onClick={() => {
@@ -127,7 +130,7 @@ export default function Navbar() {
               >
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/contact"
@@ -140,9 +143,16 @@ export default function Navbar() {
               </Link>
             </li>
 
-            <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-full text-sm mt-2 hover:bg-blue-700">
-              Read More →
-            </button>
+<button
+      onClick={() => {
+        setMenuOpen(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        navigate("/contact"); 
+      }}
+      className="w-full bg-blue-600 text-white px-4 py-2 rounded-full text-sm mt-2 hover:bg-blue-700"
+    >
+      Request a Quote
+    </button>
           </ul>
         </div>
       )}
