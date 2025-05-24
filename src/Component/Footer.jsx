@@ -66,12 +66,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <h4 className="font-semibold mb-4">Working Time</h4>
           <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
           <p>Saturday: 10:00 AM - 6:00 PM</p>
           <p>Sunday: Closed</p>
-        </div>
+        </div> */}
 
         
         <div>
@@ -79,7 +79,6 @@ const Footer = () => {
           <a href="info@instantmotexeter.co.uk" className="text-blue-400 hover:underline block mb-2">
             pgs.admin@peterpangs.co.uk
           </a>
-          <p className="text-lg font-bold">+234 703 923 7226</p>
         </div>
       </div>
 
