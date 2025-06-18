@@ -119,7 +119,6 @@ export default function ITBusinessSection() {
             ))}
           </ul>
 
-          {/* CTA Button */}
           <div className="mt-6">
             <button className="bg-blue-600 text-white px-6 py-2 rounded-full cursor-pointer hover:bg-blue-700 transition">
               Explore More About Us

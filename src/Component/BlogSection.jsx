@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ArrowRight } from "lucide-react";
 import blog1 from "../assets/blog.jpg";
-import blog2 from "../assets/blog1.jpg";
+import blog2 from "../assets/blog.jpg";
 
 const blogs = [
   {
