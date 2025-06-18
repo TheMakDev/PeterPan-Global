@@ -34,10 +34,11 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center space-x-2"
         >
-          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-            <div className="text-white font-bold text-sm">⚙️</div>
-          </div>
-          <span className="text-2xl font-bold text-gray-800">PeterPan</span>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="w-16 h-16 object-contain"
+          />
         </Link>
 
         <ul className="hidden lg:flex space-x-6 text-base font-medium text-gray-700">

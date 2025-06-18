@@ -1,7 +1,9 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";  // Import Lucide arrow icon
-import blog1 from "../assets/blog.jpeg";
-import blog2 from "../assets/blog1.jpeg";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { ArrowRight } from "lucide-react";
+import blog1 from "../assets/blog.jpg";
+import blog2 from "../assets/blog1.jpg";
 
 const blogs = [
   {
@@ -23,11 +25,18 @@ const blogs = [
 ];
 
 export default function BlogSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 px-6 md:px-12">
+    <section
+      className="py-20 bg-gradient-to-b from-white to-gray-50 px-6 md:px-12"
+      data-aos="fade-up"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <p className="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-3">
             Trusted News & Blogs
           </p>
@@ -47,6 +56,7 @@ export default function BlogSection() {
               className="group bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-[1.03] hover:shadow-2xl"
               tabIndex={0}
               aria-label={`${title} blog post`}
+              data-aos="zoom-in-up"
             >
               <img
                 src={image}

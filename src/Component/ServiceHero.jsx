@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../assets/hero-1.jpeg'
+import bg from '../assets/hero-1.jpg'
 
 const ServiceHero = () => {
   return (

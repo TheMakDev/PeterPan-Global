@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import bg from '../assets/hero-1.jpeg';
+import bg from '../assets/hero-1.jpg';
 
 const HeroSection = () => {
   return (
@@ -8,10 +8,9 @@ const HeroSection = () => {
       className="relative w-full h-[600px] sm:h-[700px] bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/50 to-transparent"></div>
+    
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/70 to-transparent"></div>
 
-      {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col justify-center h-full text-white">
         <motion.p
           className="text-lg sm:text-xl font-semibold mb-2"

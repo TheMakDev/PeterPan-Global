@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import img from '../assets/blog.jpeg';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import img from '../assets/blog.jpg';
 
 const tabs = {
   'Our Approach': {
@@ -37,18 +39,28 @@ const tabs = {
 export default function AboutSection() {
   const [selectedTab, setSelectedTab] = useState('Advisory');
 
-  return (
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-12 p-8">
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // animation triggers once
+  }, []);
 
-      <div className="max-w-xl">
-        <a href="#" className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+  return (
+    <div
+      className="flex flex-col lg:flex-row items-center justify-center gap-12 p-6 sm:p-8"
+      data-aos="zoom-in"
+    >
+      {/* Text Section */}
+      <div className="max-w-xl w-full" data-aos="flip-up">
+        <a
+          href="#"
+          className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-wider"
+        >
           How to Manage
         </a>
-        <h1 className="text-4xl font-bold text-gray-900 mt-4 leading-tight">
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mt-4 leading-tight">
           Our Managed IT Services <br /> Let You Concentrate On <br /> What Matters
         </h1>
 
-        <div className="flex gap-6 mt-6 border-b border-gray-300 pb-2">
+        <div className="flex flex-wrap gap-4 mt-6 border-b border-gray-300 pb-2">
           {Object.keys(tabs).map((tab) => (
             <button
               key={tab}
@@ -74,26 +86,26 @@ export default function AboutSection() {
           ))}
         </ul>
 
-
         <button className="mt-6 px-5 py-2 bg-blue-600 text-white rounded-full cursor-pointer shadow hover:bg-blue-700 text-sm font-semibold">
           Learn More
         </button>
       </div>
 
-      <div className="relative">
+      {/* Image Section */}
+      <div className="relative" data-aos="zoom-in-up">
         <img
           src={img}
           alt="Team working"
-          className="rounded-lg w-[400px] h-auto object-cover"
+          className="rounded-lg w-full max-w-[400px] h-auto object-cover"
         />
-        <div className="absolute bottom-4 left-4 bg-blue-600 text-white rounded-lg p-4 shadow-lg w-[180px] space-y-4">
+        <div className="absolute bottom-4 left-4 bg-blue-600 text-white rounded-lg p-4 shadow-lg w-[160px] sm:w-[180px] space-y-4">
           <div>
-            <div className="text-2xl font-bold">98%</div>
-            <div className="text-sm">Project Success</div>
+            <div className="text-xl sm:text-2xl font-bold">98%</div>
+            <div className="text-xs sm:text-sm">Project Success</div>
           </div>
           <div>
-            <div className="text-2xl font-bold">63%</div>
-            <div className="text-sm">Happy Clients</div>
+            <div className="text-xl sm:text-2xl font-bold">63%</div>
+            <div className="text-xs sm:text-sm">Happy Clients</div>
           </div>
         </div>
       </div>
