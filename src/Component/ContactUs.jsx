@@ -54,7 +54,7 @@ const ContactUs = () => {
         <div className="space-y-6">
           <a href="#" className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Get in Touch</a>
           <h2 className="text-4xl font-bold text-gray-800 mt-2">Contact Us</h2>
-          <p className="text-gray-600 mt-2 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem...</p>
+          <p className="text-gray-600 mt-2 text-sm">PeterPan Global Service is dedicated to providing top-notch IT solutions. Contact us for more information.</p>
 
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="flex gap-4 items-start">
@@ -64,22 +64,24 @@ const ContactUs = () => {
                 <p className="text-gray-600 text-sm">Exeter UK</p>
               </div>
             </div>
-            <div className="flex gap-4 items-start">
-              <div className="text-blue-600 text-xl mt-1"><FaPhoneAlt /></div>
-              <div>
-                <h4 className="font-semibold text-gray-700">Phone</h4>
-                <p className="text-gray-600 text-sm">12345667456</p>
-              </div>
-            </div>
-          </div>
 
-          <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-start">
             <div className="text-blue-600 text-xl mt-1"><FaEnvelope /></div>
             <div>
               <h4 className="font-semibold text-gray-700">Email</h4>
               <p className="text-gray-600 text-sm">pgs.admin@peterpangs.co.uk</p>
             </div>
           </div>
+            {/* <div className="flex gap-4 items-start">
+              <div className="text-blue-600 text-xl mt-1"><FaPhoneAlt /></div>
+              <div>
+                <h4 className="font-semibold text-gray-700">Phone</h4>
+                <p className="text-gray-600 text-sm">12345667456</p>
+              </div>
+            </div> */}
+          </div>
+
+          
 
           <div className="flex items-center gap-4 pt-2">
             <h4 className="text-sm font-semibold text-gray-700">Social</h4>

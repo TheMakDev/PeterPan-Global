@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, PhoneCall, Search } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 
 export default function Navbar() {
-
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
   const [isSticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -20,6 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false); // auto-close menu on route change
   }, [location.pathname]);
 
   return (
@@ -43,36 +42,24 @@ export default function Navbar() {
 
         <ul className="hidden lg:flex space-x-6 text-base font-medium text-gray-700">
           <li>
-            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Home
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              About
-            </Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Services
-            </Link>
+            <Link to="/services">Services</Link>
           </li>
-          {/* <li>
-            <Link to="/blog" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Blog
-            </Link>
-          </li> */}
           <li>
-            <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Contact
-            </Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
         <div className="hidden lg:flex items-center space-x-4">
-          <div className="flex items-center space-x-1 text-sm font-medium text-gray-700">
-          </div>
-          <button onClick={() => navigate('/contact')} className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700">
+          <button
+            onClick={() => navigate("/contact")}
+            className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-full text-sm flex items-center space-x-1 hover:bg-blue-700"
+          >
             Request a Quote
           </button>
           <Search className="text-blue-600 cursor-pointer" />
@@ -85,78 +72,58 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Mobile Overlay */}
       {menuOpen && (
-        <div className="lg:hidden bg-white px-4 pb-4 shadow-md">
-          <ul className="space-y-3 text-gray-700 font-medium">
-            <li>
-              <Link
-                to="/"
-                onClick={() => {
-                  setMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                onClick={() => {
-                  setMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/services"
-                onClick={() => {
-                  setMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Services
-              </Link>
-            </li>
-            {/* <li>
-              <Link
-                to="/blog"
-                onClick={() => {
-                  setMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Blog
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                to="/contact"
-                onClick={() => {
-                  setMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Contact
-              </Link>
-            </li>
-
-<button
-      onClick={() => {
-        setMenuOpen(false);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        navigate("/contact"); 
-      }}
-      className="w-full bg-blue-600 text-white px-4 py-2 rounded-full text-sm mt-2 hover:bg-blue-700"
-    >
-      Request a Quote
-    </button>
-          </ul>
-        </div>
+        <div
+          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 z-30 bg-black/50 lg:hidden"
+        />
       )}
+
+      {/* Full-screen mobile menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out lg:hidden ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full justify-between px-6 py-4">
+          <div>
+            <div className="flex justify-between items-center mb-6">
+              <img src="/logo.png" alt="Logo" className="w-14 h-14 object-contain" />
+              <button onClick={() => setMenuOpen(false)}>
+                <X size={28} />
+              </button>
+            </div>
+            <ul className="space-y-6 text-lg font-semibold text-gray-800">
+              {["Home", "About", "Services", "Contact"].map((label) => (
+                <li key={label}>
+                  <Link
+                    to={`/${label.toLowerCase() === "home" ? "" : label.toLowerCase()}`}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-6">
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                navigate("/contact");
+              }}
+              className="w-full bg-blue-600 text-white px-4 py-3 rounded-full text-base font-medium hover:bg-blue-700"
+            >
+              Request a Quote
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
